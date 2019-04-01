@@ -49,11 +49,14 @@ echo "<div class='all'>";
             echo "<div class='div1'>";
                 echo "<div class='column1'>";
                     echo "<div>";
-                        echo "<img src ='";
+                        echo "<img src ='./image/";
                         echo $div1['ImageName'];
                         echo"'>";
                     echo "</div>";
                 echo "</div>";
+            
+
+
 
                 echo "<div class='column2'>";
                     echo "<div><h2>";
