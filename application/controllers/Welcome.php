@@ -22,6 +22,11 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('animalmodel');
+		// $this->load->model('bookingmodel');
+		// $this->load->model('categorymodel');
+		// $this->load->model('eventmodel');
+		// $this->load->model('feedbackmodel');
 		$this->load->helper('html');
 		$this->load->helper('url');
 	}
@@ -30,6 +35,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('layout/header');
 		// $this->load->view('welcome_message');
+
+		$IDAnimal = 3;
+		$t1 = $this->animalmodel->truyvanidanimal($IDAnimal);
+		print_r($t1);
+		$IDCategory = 1;
+		$t2 = $this->animalmodel->truyvanidcategory($IDCategory);
+		print_r($t2);
+
 		$this->load->view('layout/footer');
 	}
 }
