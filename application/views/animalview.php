@@ -23,7 +23,7 @@
         Description: <input type="text" name="Description" id="Description" style="width:200px"><br>
     </fieldset>
     <fieldset style="width:250px">
-        ImageName: <input type="file" name="file_hinh" style="width:200px" required><br>
+        ImageName: <input type="file" name="file_hinh" id="file_hinh" style="width:200px" required><br>
     </fieldset>
 
     <div><button name="btsave" id="btnsave">Save</button></div>

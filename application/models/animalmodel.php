@@ -27,5 +27,4 @@
             return $query->result();
         }
     }
-
 ?>

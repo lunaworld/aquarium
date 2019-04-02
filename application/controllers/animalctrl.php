@@ -42,7 +42,7 @@ class animalctrl extends CI_Controller {
 					'Age' => $this->input->post('Age'),
 					'Size' => $this->input->post('Size'),
 					'Description' => $this->input->post('Description'),
-					'ImageName' => $this->input->post('ImageName')
+					'ImageName' => $tt,
 				);
 				//Transfering data to Model
 				$this->animalmodel->insert_data($data);
