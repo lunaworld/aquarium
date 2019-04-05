@@ -10,7 +10,6 @@ class categoryctrl extends CI_Controller {
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDCategory', 'IDCategory', 'required');
 		$this->form_validation->set_rules('CategoryName', 'CategoryName', 'required');
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('categoryview');
@@ -35,7 +34,6 @@ class categoryctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDCategory' => $this->input->post('IDCategory'),
 					'CategoryName' => $this->input->post('CategoryName'),
                     'SpeciesInfomaton' => $this->input->post('SpeciesInfomaton'),
                     'ImageCategory' => $tt,

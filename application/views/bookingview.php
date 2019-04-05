@@ -5,9 +5,6 @@
 <?php } ?>
 
     <fieldset style="width:250px">
-        IDBooking: <input type="number" name="IDBooking" id="IDBooking" style="width:200px" required><br>
-    </fieldset>
-    <fieldset style="width:250px">
         IDEvent: <input type="number" name="IDEvent" id="IDEvent" style="width:200px" required><br>
     </fieldset>
     <fieldset style="width:250px">
@@ -43,7 +40,6 @@
 
     <div><button name="btsave" id="btnsave">Save</button></div>
 
-    <span>IDBooking:</span><span><?= ($IDBooking ?? "") ?></span><br>
     <span>IDEvent:</span><span><?= ($IDEvent ?? "") ?></span><br>
     <span>NameCustomer:</span><span><?= ($NameCustomer ?? "") ?></span><br>
     <span>ImageCustomer:</span><span><?= ($ImageCustomer ?? "") ?></span><br>

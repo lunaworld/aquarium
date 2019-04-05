@@ -4,9 +4,6 @@
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
     <fieldset style="width:250px">
-        IDEvent: <input type="number" name="IDEvent" id="IDEvent" style="width:200px" required><br>
-    </fieldset>
-    <fieldset style="width:250px">
         NameEvent: <input type="text" name="NameEvent" id="NameEvent" style="width:200px" required><br>
     </fieldset>
     <fieldset style="width:250px">
@@ -36,7 +33,6 @@
 
     <div><button name="btsave" id="btnsave">Save</button></div>
 
-    <span>IDEvent:</span><span><?= ($IDEvent ?? "") ?></span><br>
     <span>NameEvent:</span><span><?= ($NameEvent ?? "") ?></span><br>
     <span>ImageEvent:</span><span><?= ($ImageEvent ?? "") ?></span><br>
     <span>AgeAllow:</span><span><?= ($AgeAllow ?? "") ?></span><br>

@@ -5,9 +5,6 @@
 <?php } ?>
 
     <fieldset style="width:250px">
-        IDFeedback: <input type="number" name="IDFeedback" id="IDFeedback" style="width:200px" required><br>
-    </fieldset>
-    <fieldset style="width:250px">
         Content: <input type="text" name="Content" id="Content" style="width:200px" required><br>
     </fieldset>
     <fieldset style="width:250px">
@@ -16,7 +13,6 @@
 
     <div><button name="btsave" id="btnsave">Save</button></div>
 
-    <span>IDFeedback:</span><span><?= ($IDFeedback ?? "") ?></span><br>
     <span>Content:</span><span><?= ($Content ?? "") ?></span><br>
     <span>Name:</span><span><?= ($Name ?? "") ?></span><br>
     

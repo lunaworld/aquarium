@@ -10,7 +10,6 @@ class eventctrl extends CI_Controller {
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDEvent', 'IDEvent', 'required');
 		$this->form_validation->set_rules('NameEvent', 'NameEvent', 'required');
 		$this->form_validation->set_rules('AgeAllow', 'AgeAllow', 'required');
 		if ($this->form_validation->run() == FALSE) {
@@ -36,7 +35,6 @@ class eventctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDEvent' => $this->input->post('IDEvent'),
                     'NameEvent' => $this->input->post('NameEvent'),
                     'ImageEvent' => $tt,
 					'AgeAllow' => $this->input->post('AgeAllow'),

@@ -10,7 +10,6 @@ class animalctrl extends CI_Controller {
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDAnimal', 'IDAnimal', 'required');
 		$this->form_validation->set_rules('IDCategory', 'IDCategory', 'required');
 		$this->form_validation->set_rules('NameAnimal', 'NameAnimal', 'required');
 		if ($this->form_validation->run() == FALSE) {
@@ -36,7 +35,6 @@ class animalctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDAnimal' => $this->input->post('IDAnimal'),
 					'IDCategory' => $this->input->post('IDCategory'),
 					'NameAnimal' => $this->input->post('NameAnimal'),
 					'Age' => $this->input->post('Age'),

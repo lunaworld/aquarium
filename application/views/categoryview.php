@@ -5,9 +5,6 @@
 <?php } ?>
 
     <fieldset style="width:250px">
-        IDCategory: <input type="number" name="IDCategory" id="IDCategory" style="width:200px" required><br>
-    </fieldset>
-    <fieldset style="width:250px">
         CategoryName: <input type="text" name="CategoryName" id="CategoryName" style="width:200px" required><br>
     </fieldset>
     <fieldset style="width:250px">
@@ -19,7 +16,6 @@
 
     <div><button name="btsave" id="btnsave">Save</button></div>
 
-    <span>IDCategory:</span><span><?= ($IDCategory ?? "") ?></span><br>
     <span>CategoryName:</span><span><?= ($CategoryName ?? "") ?></span><br>
     <span>SpeciesInfomaton:</span><span><?= ($SpeciesInfomaton ?? "") ?></span><br>
     <span>ImageCategory:</span><span><?= ($ImageCategory ?? "") ?></span><br>

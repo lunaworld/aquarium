@@ -10,13 +10,11 @@ class feedbackctrl extends CI_Controller {
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDFeedback', 'IDFeedback', 'required');
 		$this->form_validation->set_rules('Name', 'Name', 'required');
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('feedbackview');
 		} else {	
 			$data = array(
-				'IDFeedback' => $this->input->post('IDFeedback'),
 				'Name' => $this->input->post('Name'),
                 'Content' => $this->input->post('Content'),
 			);

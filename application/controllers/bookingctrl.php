@@ -10,7 +10,6 @@ class bookingctrl extends CI_Controller {
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDBooking', 'IDBooking', 'required');
 		$this->form_validation->set_rules('IDEvent', 'IDEvent', 'required');
 		$this->form_validation->set_rules('NameCustomer', 'NameCustomer', 'required');
 		if ($this->form_validation->run() == FALSE) {
@@ -36,7 +35,6 @@ class bookingctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDBooking' => $this->input->post('IDBooking'),
 					'IDEvent' => $this->input->post('IDEvent'),
                     'NameCustomer' => $this->input->post('NameCustomer'),
                     'ImageCustomer' => $tt,
