@@ -5,5 +5,52 @@
     display:inline;
 }
 body {
-    background: red;
+    background: rgb(30, 160, 192);
+    color : white;
+}
+
+  
+  .icerik {
+      width: 100%; 
+      height: 100%;
+      background: white;
+      font-size: 4em;
+      color: #070707;
+      
+      /* icerigi ortaliyoruz */
+      /* position: absolute;
+      left: 50%; top: 50%;
+      margin-left: -125px; margin-top: -50px; */
+      
+      text-align: center;
+      line-height: 100px;
+      
+      border-top: 5px solid rgb(3, 252, 252);
+      background-color: black;
+    color: white;
+  }
+  
+  p, a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 0; 
+    text-align: center;
+  }
+.aquatheme {
+  background-color : cyan;
+  display : grid;
+  grid-template-columns : 33% 33% 33%;
+  grid-column-gap: 0.5%;
+}
+.hd1 {
+  background-color : rgb(30, 160, 192);
+  display : grid;
+  grid-template-columns: 30% 70%;
+}
+.hd2 {
+  display : grid;
+  grid-template-columns: 50% 50%;
+}
+.text {
+  text-align: center;
 }
