@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class animalctrl extends CI_Controller {
+class eventctrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
-		$this->load->model('animalmodel');
+		$this->load->model('eventmodel');
 		$this->load->helper('url_helper');
 	}
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDCategory', 'IDCategory', 'required');
-		$this->form_validation->set_rules('NameAnimal', 'NameAnimal', 'required');
+		$this->form_validation->set_rules('NameEvent', 'NameEvent', 'required');
+		$this->form_validation->set_rules('AgeAllow', 'AgeAllow', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('animalview');
+			$this->load->view('eventview');
 		} else {
 			$image_path = realpath(APPPATH . '/');
 			$config['upload_path']          = $image_path;
@@ -35,18 +35,21 @@ class animalctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDCategory' => $this->input->post('IDCategory'),
-					'NameAnimal' => $this->input->post('NameAnimal'),
-					'Age' => $this->input->post('Age'),
-					'Size' => $this->input->post('Size'),
-					'Description' => $this->input->post('Description'),
-					'ImageName' => $tt,
+                    'NameEvent' => $this->input->post('NameEvent'),
+                    'ImageEvent' => $tt,
+					'AgeAllow' => $this->input->post('AgeAllow'),
+                    'StartDate' => $this->input->post('StartDate'),
+                    'EndDate' => $this->input->post('EndDate'),
+                    'StartTime' => $this->input->post('StartTime'),
+                    'EndTime' => $this->input->post('EndTime'),
+                    'Description' => $this->input->post('Description'),
+                    'EventPrice' => $this->input->post('EventPrice'),
 				);
 				//Transfering data to Model
-				$this->animalmodel->insert_data($data);
+				$this->eventmodel->insert_data($data);
 				$data['message'] = 'Data Inserted Successfully';
 				//Loading View
-				$this->load->view('animalview', $data);
+				$this->load->view('eventview', $data);
 			}
 		}
 	}

@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class animalctrl extends CI_Controller {
+class bookingctrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
-		$this->load->model('animalmodel');
+		$this->load->model('bookingmodel');
 		$this->load->helper('url_helper');
 	}
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDCategory', 'IDCategory', 'required');
-		$this->form_validation->set_rules('NameAnimal', 'NameAnimal', 'required');
+		$this->form_validation->set_rules('IDEvent', 'IDEvent', 'required');
+		$this->form_validation->set_rules('NameCustomer', 'NameCustomer', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('animalview');
+			$this->load->view('bookingview');
 		} else {
 			$image_path = realpath(APPPATH . '/');
 			$config['upload_path']          = $image_path;
@@ -35,18 +35,23 @@ class animalctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDCategory' => $this->input->post('IDCategory'),
-					'NameAnimal' => $this->input->post('NameAnimal'),
-					'Age' => $this->input->post('Age'),
-					'Size' => $this->input->post('Size'),
-					'Description' => $this->input->post('Description'),
-					'ImageName' => $tt,
+					'IDEvent' => $this->input->post('IDEvent'),
+                    'NameCustomer' => $this->input->post('NameCustomer'),
+                    'ImageCustomer' => $tt,
+					'Phone' => $this->input->post('Phone'),
+					'Mail' => $this->input->post('Mail'),
+                    'StartDate' => $this->input->post('StartDate'),
+                    'EndDate' => $this->input->post('EndDate'),
+                    'StartTime' => $this->input->post('StartTime'),
+                    'EndTime' => $this->input->post('EndTime'),
+                    'Address' => $this->input->post('Address'),
+                    'Note' => $this->input->post('Note'),
 				);
 				//Transfering data to Model
-				$this->animalmodel->insert_data($data);
+				$this->bookingmodel->insert_data($data);
 				$data['message'] = 'Data Inserted Successfully';
 				//Loading View
-				$this->load->view('animalview', $data);
+				$this->load->view('bookingview', $data);
 			}
 		}
 	}

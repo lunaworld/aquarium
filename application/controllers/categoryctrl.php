@@ -1,19 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class animalctrl extends CI_Controller {
+class categoryctrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
-		$this->load->model('animalmodel');
+		$this->load->model('categorymodel');
 		$this->load->helper('url_helper');
 	}
 
 	function index() {
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('IDCategory', 'IDCategory', 'required');
-		$this->form_validation->set_rules('NameAnimal', 'NameAnimal', 'required');
+		$this->form_validation->set_rules('CategoryName', 'CategoryName', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('animalview');
+			$this->load->view('categoryview');
 		} else {
 			$image_path = realpath(APPPATH . '/');
 			$config['upload_path']          = $image_path;
@@ -35,18 +34,15 @@ class animalctrl extends CI_Controller {
 			//Setting values for tabel columns
 			if($tt != '0') {	
 				$data = array(
-					'IDCategory' => $this->input->post('IDCategory'),
-					'NameAnimal' => $this->input->post('NameAnimal'),
-					'Age' => $this->input->post('Age'),
-					'Size' => $this->input->post('Size'),
-					'Description' => $this->input->post('Description'),
-					'ImageName' => $tt,
+					'CategoryName' => $this->input->post('CategoryName'),
+                    'SpeciesInfomaton' => $this->input->post('SpeciesInfomaton'),
+                    'ImageCategory' => $tt,
 				);
 				//Transfering data to Model
-				$this->animalmodel->insert_data($data);
+				$this->categorymodel->insert_data($data);
 				$data['message'] = 'Data Inserted Successfully';
 				//Loading View
-				$this->load->view('animalview', $data);
+				$this->load->view('categoryview', $data);
 			}
 		}
 	}
