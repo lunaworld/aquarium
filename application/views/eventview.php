@@ -25,7 +25,7 @@
         EndTime: <input type="text" name="EndTime" id="EndTime" style="width:200px"><br>
     </fieldset>
     <fieldset style="width:250px">
-        Description: <input type="text" name="Description" id="Description" style="width:200px"><br>
+        Description: <?php echo $this->ckeditor->editor("textarea name", "default textarea value"); ?><br>
     </fieldset>
     <fieldset style="width:250px">
         EventPrice: <input type="text" name="EventPrice" id="EventPrice" style="width:200px"><br>

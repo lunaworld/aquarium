@@ -6,9 +6,47 @@ class categoryctrl extends CI_Controller {
 		parent::__construct();
 		$this->load->model('categorymodel');
 		$this->load->helper('url_helper');
+		$this->load->helper('ckeditor_helper');
+
+        //Ckeditor's configuration
+        $this->data['ckeditor'] = array(
+            'id' => 'content',
+            'path' => 'js/ckeditor',
+            'config' => array(
+                'toolbar' => "Full", //Using the Full toolbar
+                'width' => "550px", //Setting a custom width
+                'height' => '100px', //Setting a custom height
+
+            ),
+            'styles' => array(
+                'style 1' => array(
+                    'name' => 'Blue Title',
+                    'element' => 'h2',
+                    'styles' => array(
+                        'color' => 'Blue',
+                        'font-weight' => 'bold'
+                    )
+                ),
+                'style 2' => array(
+                    'name' => 'Red Title',
+                    'element' => 'h2',
+                    'styles' => array(
+                        'color' => 'Red',
+                        'font-weight' => 'bold',
+                        'text-decoration' => 'underline'
+                    )
+                )
+            )
+        );
 	}
 
 	function index() {
+		$this->load->library('CKEditor');
+        $this->load->library('CKFinder');
+
+        //Add Ckfinder to Ckeditor
+        $this->ckfinder->SetupCKEditor($this->ckeditor,'../../assets/ckfinder/'); 
+		$this->load->view('layout/adminheader.php');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('CategoryName', 'CategoryName', 'required');
 		if ($this->form_validation->run() == FALSE) {
@@ -42,9 +80,12 @@ class categoryctrl extends CI_Controller {
 				$this->categorymodel->insert_data($data);
 				$data['message'] = 'Data Inserted Successfully';
 				//Loading View
+				
 				$this->load->view('categoryview', $data);
+				
 			}
 		}
+		$this->load->view('layout/adminfooter.php');
 	}
 }
 ?>

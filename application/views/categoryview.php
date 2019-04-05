@@ -8,7 +8,7 @@
         CategoryName: <input type="text" name="CategoryName" id="CategoryName" style="width:200px" required><br>
     </fieldset>
     <fieldset style="width:250px">
-        SpeciesInfomaton: <input type="text" name="SpeciesInfomaton" id="SpeciesInfomaton" style="width:200px" required><br>
+        SpeciesInfomaton: <?php echo $this->ckeditor->editor("textarea name", "default textarea value"); ?><br>
     </fieldset>
     <fieldset style="width:250px">
         ImageCategory: <input type="file" name="file_hinh" id="file_hinh" style="width:200px" required><br>

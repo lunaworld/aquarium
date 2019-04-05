@@ -15,13 +15,13 @@
         public function truyvanidbooking($IDBooking) {
             $this->db->select('*');
             $this->db->from('booking');
-            $this->db->where('IDBooking', $IDBooking);
+            $this->db->where('IDCustomer', $IDBooking);
             $query = $this->db->get();
             return $query->result();
         }
         public function truyvanidevent($IDEvent) {
             $this->db->select('*');
-            $this->db->from('animal');
+            $this->db->from('booking');
             $this->db->where('IDEvent', $IDEvent);
             $query = $this->db->get();
             return $query->result();
