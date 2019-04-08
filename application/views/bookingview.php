@@ -24,7 +24,6 @@
                     Mail: <br><input type="text" name="Mail" id="Mail" style="width:200px"><br>
                 </fieldset>
 
-<<<<<<< HEAD
     <fieldset >
         IDEvent: <input type="number" name="IDEvent" id="IDEvent"  required><br>
     </fieldset>
@@ -58,34 +57,6 @@
     <fieldset >
         Note: <input type="text" name="Note" id="Note" ><br>
     </fieldset>
-=======
-
-                <fieldset style="width:250px">
-                    StartDate: <input type="text" name="StartDate" id="StartDate" style="width:200px"><br>
-                </fieldset>
-                <fieldset style="width:250px">
-                    EndDate: <input type="text" name="EndDate" id="EndDate" style="width:200px"><br>
-                </fieldset>
-
-
-                <fieldset style="width:250px">
-                    StartTime: <input type="text" name="StartTime" id="StartTime" style="width:200px"><br>
-                </fieldset>
-                <fieldset style="width:250px">
-                    EndTime: <input type="text" name="EndTime" id="EndTime" style="width:200px"><br>
-                </fieldset>
-            </div>
-            <div class = "bkview2">
-                <fieldset style="width:250px">
-                    Address: <input type="text" name="Address" id="Address" style="width:200px"><br>
-                </fieldset>
-                <fieldset style="width:250px">
-                    Note: <input type="text" name="Note" id="Note" style="width:200px"><br>
-                </fieldset>
-            </div>
-        </div>
-    </div>
->>>>>>> e084276654eeb0075d6449fbff8805269070d95e
 
     <div><button name="btsave" id="btnsave">Save</button></div>
 

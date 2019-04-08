@@ -5,16 +5,6 @@
     display:inline;
 }
 body {
-<<<<<<< HEAD
-    background: red;
-}
-
-fieldset {
-    width:100%;
-}
-input {
-    width:100%;
-=======
     background: rgb(30, 160, 192);
     color : white;
 }
@@ -114,5 +104,4 @@ nav {
   /* height: 50px;
   padding-left : 30%;
   background-color : cyan; */
->>>>>>> e084276654eeb0075d6449fbff8805269070d95e
 }

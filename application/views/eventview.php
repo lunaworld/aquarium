@@ -12,7 +12,6 @@
     <fieldset >
         AgeAllow: <br><input type="number" name="AgeAllow" id="AgeAllow" ><br>
     </fieldset>
-<<<<<<< HEAD
     <fieldset >
         StartDate: <input type="date" name="StartDate" id="StartDate" ><br>
     </fieldset>
@@ -27,28 +26,6 @@
     </fieldset>
     <fieldset >
         Description: <?php echo $this->ckeditor->editor("Description", "default textarea value"); ?><br>
-=======
-    <div class = "evviewall">
-        <div>
-            <fieldset style="width:250px">
-                StartDate: <input type="text" name="StartDate" id="StartDate" style="width:200px"><br>
-            </fieldset>
-            <fieldset style="width:250px">
-                EndDate: <input type="text" name="EndDate" id="EndDate" style="width:200px"><br>
-            </fieldset>
-        </div>
-        <div>
-            <fieldset style="width:250px">
-                StartTime: <input type="text" name="StartTime" id="StartTime" style="width:200px"><br>
-            </fieldset>
-            <fieldset style="width:250px">
-                EndTime: <input type="text" name="EndTime" id="EndTime" style="width:200px"><br>
-            </fieldset>
-        </div>
-    </div>
-    <fieldset style="width:250px">
-        Description: <?php echo $this->ckeditor->editor("textarea name", "default textarea value"); ?><br>
->>>>>>> e084276654eeb0075d6449fbff8805269070d95e
     </fieldset>
     <fieldset >
         EventPrice: <input type="number" name="EventPrice" id="EventPrice" ><br>
