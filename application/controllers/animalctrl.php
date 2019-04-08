@@ -5,8 +5,11 @@ class animalctrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('animalmodel');
+		$this->load->model('categorymodel');
 		$this->load->helper('url_helper');
 		$this->load->helper('ckeditor_helper');
+		$this->load->helper('html');
+		$this->load->helper('url');
 
         //Ckeditor's configuration
         $this->data['ckeditor'] = array(
@@ -50,9 +53,10 @@ class animalctrl extends CI_Controller {
 		$this->form_validation->set_rules('IDCategory', 'IDCategory', 'required');
 		$this->form_validation->set_rules('NameAnimal', 'NameAnimal', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('animalview');
+			$data['category'] = $this->categorymodel->truyvancategory();		
+			$this->load->view('animalview',$data);
 		} else {
-			$image_path = realpath(APPPATH . '/');
+			$image_path = realpath(APPPATH . '../image/');
 			$config['upload_path']          = $image_path;
             $config['allowed_types']        = '*';
                 

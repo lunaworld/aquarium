@@ -6,7 +6,9 @@ class eventctrl extends CI_Controller {
 		parent::__construct();
 		$this->load->model('eventmodel');
 		$this->load->helper('url_helper');
-		$this->load->helper('ckeditor_helper');
+        $this->load->helper('ckeditor_helper');
+        $this->load->helper('html');
+		$this->load->helper('url');
 
         //Ckeditor's configuration
         $this->data['ckeditor'] = array(
@@ -53,7 +55,7 @@ class eventctrl extends CI_Controller {
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('eventview');
 		} else {
-			$image_path = realpath(APPPATH . '/');
+			$image_path = realpath(APPPATH . '../image/');
 			$config['upload_path']          = $image_path;
             $config['allowed_types']        = '*';
                 

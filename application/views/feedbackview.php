@@ -4,11 +4,11 @@
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
 
-    <fieldset style="width:250px">
-        Content: <input type="text" name="Content" id="Content" style="width:200px" required><br>
+    <fieldset >
+        Content: <input type="text" name="Content" id="Content"  required><br>
     </fieldset>
-    <fieldset style="width:250px">
-        Name: <br><input type="text" name="Name" id="Name" style="width:200px"><br>
+    <fieldset >
+        Name: <br><input type="text" name="Name" id="Name" ><br>
     </fieldset>
 
     <div><button name="btsave" id="btnsave">Save</button></div>

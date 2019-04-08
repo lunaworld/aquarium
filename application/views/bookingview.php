@@ -4,38 +4,38 @@
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
 
-    <fieldset style="width:250px">
-        IDEvent: <input type="number" name="IDEvent" id="IDEvent" style="width:200px" required><br>
+    <fieldset >
+        IDEvent: <input type="number" name="IDEvent" id="IDEvent"  required><br>
     </fieldset>
-    <fieldset style="width:250px">
-        NameCustomer: <input type="text" name="NameCustomer" id="NameCustomer" style="width:200px" required><br>
+    <fieldset >
+        NameCustomer: <input type="text" name="NameCustomer" id="NameCustomer"  required><br>
     </fieldset>
-    <fieldset style="width:250px">
-        ImageCustomer: <input type="file" name="file_hinh" id="file_hinh" style="width:200px" required><br>
+    <fieldset >
+        ImageCustomer: <input type="file" name="file_hinh" id="file_hinh"  required><br>
     </fieldset>
-    <fieldset style="width:250px">
-        Phone: <br><input type="text" name="Phone" id="Phone" style="width:200px"><br>
+    <fieldset >
+        Phone: <br><input type="text" name="Phone" id="Phone" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        Mail: <br><input type="text" name="Mail" id="Mail" style="width:200px"><br>
+    <fieldset >
+        Mail: <br><input type="text" name="Mail" id="Mail" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        StartDate: <input type="text" name="StartDate" id="StartDate" style="width:200px"><br>
+    <fieldset >
+        StartDate: <input type="text" name="StartDate" id="StartDate" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        EndDate: <input type="text" name="EndDate" id="EndDate" style="width:200px"><br>
+    <fieldset >
+        EndDate: <input type="text" name="EndDate" id="EndDate" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        StartTime: <input type="text" name="StartTime" id="StartTime" style="width:200px"><br>
+    <fieldset >
+        StartTime: <input type="text" name="StartTime" id="StartTime" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        EndTime: <input type="text" name="EndTime" id="EndTime" style="width:200px"><br>
+    <fieldset >
+        EndTime: <input type="text" name="EndTime" id="EndTime" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        Address: <input type="text" name="Address" id="Address" style="width:200px"><br>
+    <fieldset >
+        Address: <input type="text" name="Address" id="Address" ><br>
     </fieldset>
-    <fieldset style="width:250px">
-        Note: <input type="text" name="Note" id="Note" style="width:200px"><br>
+    <fieldset >
+        Note: <input type="text" name="Note" id="Note" ><br>
     </fieldset>
 
     <div><button name="btsave" id="btnsave">Save</button></div>

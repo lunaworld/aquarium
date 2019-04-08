@@ -6,6 +6,8 @@ class bookingctrl extends CI_Controller {
 		parent::__construct();
 		$this->load->model('bookingmodel');
 		$this->load->helper('url_helper');
+		$this->load->helper('html');
+		$this->load->helper('url');
 	}
 
 	function index() {

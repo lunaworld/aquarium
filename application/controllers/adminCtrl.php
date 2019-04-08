@@ -5,6 +5,8 @@ class adminCtrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->helper('url_helper');
+		$this->load->helper('html');
+		$this->load->helper('url');
 	}
 
 	function index() {

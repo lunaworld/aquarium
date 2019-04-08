@@ -7,3 +7,10 @@
 body {
     background: red;
 }
+
+fieldset {
+    width:100%;
+}
+input {
+    width:100%;
+}
