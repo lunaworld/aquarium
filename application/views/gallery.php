@@ -16,6 +16,7 @@ $gallery[] = array("IDAnimal"=> 200, "IDCategory"=> 459, "NameAnimal"=> 'Sao Biá
 
 .all {
     background-color : white;
+    clear : both;
 }
 .total {
     background-color : black;
