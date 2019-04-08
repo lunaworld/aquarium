@@ -54,3 +54,27 @@ body {
 .text {
   text-align: center;
 }
+.adminheader {
+  display : grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.allfield {
+  display : grid;
+  grid-template-columns: 50% 50%;
+}
+.bkviewall {
+  display : grid;
+  grid-template-columns: 40% 60%;
+}
+.bkview1 {
+  display : grid;
+  grid-template-columns: auto auto auto;
+}
+.bkview2 {
+  display : grid;
+  grid-template-columns: auto auto;
+}
+.evviewall {
+  display : grid;
+  grid-template-columns: 50% 50%;
+}

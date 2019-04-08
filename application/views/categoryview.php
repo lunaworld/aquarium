@@ -16,8 +16,8 @@
 
     <div><button name="btsave" id="btnsave">Save</button></div>
 
-    <span>CategoryName:</span><span><?= ($CategoryName ?? "") ?></span><br>
+    <!-- <span>CategoryName:</span><span><?= ($CategoryName ?? "") ?></span><br>
     <span>SpeciesInfomaton:</span><span><?= ($SpeciesInfomaton ?? "") ?></span><br>
-    <span>ImageCategory:</span><span><?= ($ImageCategory ?? "") ?></span><br>
+    <span>ImageCategory:</span><span><?= ($ImageCategory ?? "") ?></span><br> -->
     
 <?php echo form_close(); ?><br/>
