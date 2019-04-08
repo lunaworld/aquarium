@@ -15,8 +15,21 @@
 
 	<div class="container"><!--CONTAINER-->
 		<header><!--HEADER-->
+			<div class = "hd1">
+					<img src="<?php echo base_url();?>image/logo.jfif" width="350px" height="100px">
+					<div>
+						<div class = "text">
+							<h1 style = "font-size : 38px">NEXUS AQUARIUM</h1>
+						</div>
+						<div class = "hd2">
+							<span style = "text-align : center; font-size : 20px">Email : NexuxAqua@gmail.com</span>
+							<span style = "text-align : center; font-size : 20px>">Phone : 090 409 6335</span>
+						</div>
+					</div>
+
+			</div>
 			<a class="logo logoEn" href="home.html"></a>
-            <div class="clearfix" style = 'margin-bottom: 125px'></div>
+            <!-- <div class="clearfix" style = 'margin-bottom: 125px'></div> -->
 			<nav><!--NAV-->
 				<ul class = 'nav-item'>
                     <li class="menu-item ">
@@ -35,3 +48,5 @@
 				</ul>
 			</nav>
 		</header><!--HEADER-->
+
+		

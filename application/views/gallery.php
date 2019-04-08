@@ -13,11 +13,10 @@ $gallery[] = array("IDAnimal"=> 200, "IDCategory"=> 459, "NameAnimal"=> 'Sao Biá
 ?>
 
 <style>
-img {
-    width : 100%;
-}
+
 .all {
     background-color : white;
+    clear : both;
 }
 .total {
     background-color : black;
@@ -49,11 +48,17 @@ echo "<div class='all'>";
             echo "<div class='div1'>";
                 echo "<div class='column1'>";
                     echo "<div>";
-                        echo "<img src ='";
+                        echo "<img src ='";;
+                        echo base_url();
+                        echo "image/";
                         echo $div1['ImageName'];
-                        echo"'>";
+                        
+                        echo"'style ='width:100%'>";
                     echo "</div>";
                 echo "</div>";
+            
+
+
 
                 echo "<div class='column2'>";
                     echo "<div><h2>";

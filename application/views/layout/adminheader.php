@@ -9,6 +9,7 @@
 </head>
 <body>
 <header>
+<<<<<<< HEAD
     <ul>
         <li>
             <a href = "#">Home</a>
@@ -26,4 +27,25 @@
             <a href = "#">Booking</a>
         </li>
     </ul>
+=======
+    <div class = "adminheader">
+        <ul>
+            <li>
+                <a href = "#">Home</a>
+            </li>
+            <li>
+                <a href = "animalCtrl">Animal</a>
+            </li>
+            <li>
+                <a href = "animalCtrl">Category</a>
+            </li>
+            <li>
+                <a href = "eventCtrl">Event</a>
+            </li>
+            <li>
+                <a href = "#">Booking</a>
+            </li>
+        </ul>
+    </div>
+>>>>>>> e084276654eeb0075d6449fbff8805269070d95e
 </header>
