@@ -5,6 +5,7 @@ class animalctrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('animalmodel');
+		$this->load->helper('form');
 		$this->load->helper('url_helper');
 	}
 
