@@ -3,7 +3,7 @@
 <?php if (isset($message)) { ?>
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
-
+<div class = "align">
     
         IDCategory: 
         
@@ -43,5 +43,6 @@
     <span>Size:</span><span><?= ($Size ?? "") ?></span><br>
     <span>Description:</span><span><?= ($Description ?? "") ?></span><br>
     <span>ImageName:</span><span><?= ($ImageName ?? "") ?></span><br> -->
+</div>
     
 <?php echo form_close(); ?><br/>

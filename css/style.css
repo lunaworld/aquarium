@@ -105,3 +105,18 @@ nav {
   padding-left : 30%;
   background-color : cyan; */
 }
+.hda li a {
+  background : gray;
+}
+.hda li a:hover {
+  background-color: rgb(5, 217, 255);
+}
+.break {
+  margin-left : 30px;
+  padding-top : 15px;
+  clear : both;
+}
+.align {
+  line-height: 25px;
+  width: 100%;
+}

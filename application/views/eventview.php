@@ -3,6 +3,7 @@
 <?php if (isset($message)) { ?>
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
+<div class = "align">
     <fieldset >
         NameEvent: <input type="text" name="NameEvent" id="NameEvent"  required><br>
     </fieldset>
@@ -42,5 +43,5 @@
     <span>EndTime:</span><span><?= ($EndTime ?? "") ?></span><br>
     <span>Description:</span><span><?= ($Description ?? "") ?></span><br>
     <span>EventPrice:</span><span><?= ($EventPrice ?? "") ?></span><br> -->
-    
+</div> 
 <?php echo form_close(); ?><br/>
