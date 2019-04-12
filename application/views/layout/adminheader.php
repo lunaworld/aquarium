@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <ul>
+    <ul class = "hda">
         <li>
             <a href = "#">Home</a>
         </li>
@@ -27,3 +27,4 @@
         </li>
     </ul>
 </header>
+<div class ='break'>
