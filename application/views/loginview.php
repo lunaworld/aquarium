@@ -1,4 +1,4 @@
-<?php echo form_open_multipart('loginctrl/login'); ?>
+<?php echo form_open('loginctrl/login'); ?>
 
 <?php if (isset($message)) { ?>
 <h3 style="color:green;">Login successfully</h3><br>
@@ -10,12 +10,5 @@
         Password: <br><input type="password" name="password" id="password" style="width:200px" required><br>
     </fieldset>
     <input type = 'submit' value = 'login'>
-    <!-- input type thay vi button de co the dung action cua form -->
-
-    <!-- <div><button name="btlogin" id="btnlogin">Login</button></div> -->
-    <!-- <div><button name="btlogout" id="btnlogout">Logout</button></div> -->
-
-    <span>User Name:</span><span><?= ($username ?? "") ?></span><br>
-    <span>Password:</span><span><?= ($password ?? "") ?></span><br>
 
 <?php echo form_close(); ?><br/>

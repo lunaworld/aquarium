@@ -3,7 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class eventctrl extends CI_Controller {
 	function __construct() {
-		parent::__construct();
+        parent::__construct();
+        $this->load->library('session');
+		$this->load->model('loginmodel');
 		$this->load->model('eventmodel');
 		$this->load->helper('url_helper');
         $this->load->helper('ckeditor_helper');
@@ -43,6 +45,7 @@ class eventctrl extends CI_Controller {
 	}
 
 	function index() {
+        if($this->loginmodel->isLoggedIn()){};
 		$this->load->library('CKEditor');
         $this->load->library('CKFinder');
 

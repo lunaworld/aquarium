@@ -1,8 +1,8 @@
 <?php
-$event = array();
-$event[] = array("IDEvent"=>147, "ImageEvent"=>'ImageEvent.jpg', "StartDate"=>'23/03/2019', "EndDate"=>'24/03/2019',
- "StartTime"=>'6h30', "EndTime"=>'19h30', 'NameEvent'=>'Aquarium Event', "Description"=>'Mo ta', 
- "AgeAllow"=>'12-16', "EventPrice"=>'60$');
+// $event = array();
+// $event[] = array("IDEvent"=>147, "ImageEvent"=>'ImageEvent.jpg', "StartDate"=>'23/03/2019', "EndDate"=>'24/03/2019',
+//  "StartTime"=>'6h30', "EndTime"=>'19h30', 'NameEvent'=>'Aquarium Event', "Description"=>'Mo ta', 
+//  "AgeAllow"=>'12-16', "EventPrice"=>'60$');
  
 ?>
 <style>

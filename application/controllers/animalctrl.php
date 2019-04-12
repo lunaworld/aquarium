@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class animalctrl extends CI_Controller {
 	function __construct() {
 		parent::__construct();
+		$this->load->library('session');
+		$this->load->model('loginmodel');
 		$this->load->model('animalmodel');
 		$this->load->model('categorymodel');
 		$this->load->helper('url_helper');
@@ -44,6 +46,7 @@ class animalctrl extends CI_Controller {
 	}
 
 	function index() {
+		if($this->loginmodel->isLoggedIn()){};
 		$this->load->library('CKEditor');
         $this->load->library('CKFinder');
         //Add Ckfinder to Ckeditor
@@ -93,6 +96,7 @@ class animalctrl extends CI_Controller {
 			}
 		}
 		$this->load->view('layout/adminfooter.php');
+		
 	}
 }
 ?>

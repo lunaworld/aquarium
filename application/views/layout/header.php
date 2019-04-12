@@ -33,17 +33,17 @@
 			<nav><!--NAV-->
 				<ul class = 'nav-item'>
                     <li class="menu-item ">
-                        <a href="Home.html">Home</a>
+                        <a href="home">Home</a>
                     </li>
 					<li class="menu-item ">
-                        <a href="Category.html">Category</a>
+                        <a href="gallery">Category</a>
                     </li>
                     </li>
                     <li class="menu-item ">
-                            <a href="Booking.html">Booking</a>
+                            <a href="booking">Booking</a>
                     </li>
                     <li class="menu-item ">
-                        <a href="Event.html">Event</a>
+                        <a href="event">Event</a>
                     </li>
 				</ul>
 			</nav>

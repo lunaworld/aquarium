@@ -10,7 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class loginctrl extends CI_Controller {
 	function __construct() {
-		parent::__construct();
+        parent::__construct();
+        $this->load->library('session');
         $this->load->model('loginmodel');
         $this->load->helper('url_helper');
         $this->load->helper('form');
@@ -19,6 +20,7 @@ class loginctrl extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('username', 'username', 'required');
         $this->form_validation->set_rules('password', 'password', 'required');
+        print_r($this->session->userdata());
         $this->load->view('loginview');
     }
 
@@ -34,23 +36,13 @@ class loginctrl extends CI_Controller {
 
         //call the model for auth
         if($this->loginmodel->login($username, $password)) {
-            echo "success";
-            //chuyen den trang can chuyen
-            //tao 1 bien session o day de giu trang thai dang nhap
+            $data = array(
+                         'username'=> $username,
+                         'logged_in'=>TRUE
+                     );       
+            $this->session->set_userdata($data);
             
-
-            // if ($this->form_validation->run() == FALSE) {
-            //     $this->load->view('loginview');
-            // } else {
-            //     $data = array(
-            //         'username' => $this->input->post('username'),
-            //         'password' => $this->input->post('password'),
-            //     );
-            //     //Transfering data to Model
-            //     $this->loginmodel->insert_data($data);
-            //     $data['message'] = 'Data Inserted Successfully';
-            //     //Loading View
-            //     $this->load->view('loginview', $data);
+            redirect('admin');
             // }
         } else {
             echo'username or password incorrect';

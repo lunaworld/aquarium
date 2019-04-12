@@ -31,10 +31,11 @@
 
         function isLoggedIn() {
             $is_logged_in = $this->session->userdata('logged_in');
-            if(!isset($is_logged_in) || $is_logged_in!==TRUE) {
-                redirect('/');
-                exit;
+            if(isset($is_logged_in)) {
+                return TRUE;
             }
+            redirect('login');
+            return False;
         }
     }
 ?>

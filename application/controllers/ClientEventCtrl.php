@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Welcome extends CI_Controller {
+class CLientEventCtrl extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 *
@@ -32,9 +32,9 @@ class Welcome extends CI_Controller {
 	}
 
 	public function index() {
-		$data['gallery'] = $this->animalmodel->truyvananimal();
+		$data['event'] = $this->eventmodel->truyvanevent();
 		$this->load->view('layout/header');
-		$this->load->view('gallery',$data);
+		$this->load->view('event',$data);
 		$this->load->view('layout/footer');
 	}
 }
