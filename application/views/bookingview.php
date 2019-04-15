@@ -5,9 +5,18 @@
 <?php } ?>
     <div class = "bkviewall">
         <div>
-            <fieldset style="width:250px">
-                IDEvent: <input type="number" name="IDEvent" id="IDEvent" style="width:200px" required><br>
-            </fieldset>
+            Event:        
+            <select name="IDEvent" id="IDEvent"  required>
+                <?php  
+
+                foreach($events as $cat) {
+                    ?>                    
+                        <option value="<?php echo $cat['IDEvent'];?>"><?php echo $cat['NameEvent'];?></option>;
+                    <?php
+                }
+                ?>
+            </select>
+            <br>
             <fieldset style="width:250px">
                 NameCustomer: <input type="text" name="NameCustomer" id="NameCustomer" style="width:200px" required><br>
             </fieldset>
@@ -25,7 +34,9 @@
         Address: <input type="text" name="Address" id="Address" ><br>
     </fieldset>
     <fieldset >
-        Note: <input type="text" name="Note" id="Note" ><br>
+        Note: 
+        <textarea rows="4" name="Note" id="Note">
+        </textarea><br>
     </fieldset>
 
     <div><button name="btsave" id="btnsave">Save</button></div>

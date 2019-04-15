@@ -7,6 +7,7 @@ class bookingctrl extends CI_Controller {
 		$this->load->library('session');
 		$this->load->model('loginmodel');
 		$this->load->model('bookingmodel');
+		$this->load->model('eventmodel');
 		$this->load->helper('url_helper');
 		$this->load->helper('html');
 		$this->load->helper('url');
@@ -15,10 +16,11 @@ class bookingctrl extends CI_Controller {
 	function index() {
 		$this->load->view('layout/header');
 		$this->load->library('form_validation');
+		$data['events'] = $this->eventmodel->truyvanevent();
 		$this->form_validation->set_rules('IDEvent', 'IDEvent', 'required');
 		$this->form_validation->set_rules('NameCustomer', 'NameCustomer', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('bookingview');
+			$this->load->view('bookingview',$data);
 		} else {
 			// $image_path = realpath(APPPATH . '/');
 			// $config['upload_path']          = $image_path;
