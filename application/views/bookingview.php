@@ -1,44 +1,63 @@
+<style>
+input,textarea {
+    width:100%;
+}
+.dddd {
+    clear:both;
+}
+</style>
+<div class ='asd'>
 <?php echo form_open_multipart('bookingctrl'); ?>
 
 <?php if (isset($message)) { ?>
+
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
+            <div class ='dddd'>
+                Event:      
+                 <select name="IDEvent" id="IDEvent"  required>
+                  <?php  
+
+                   foreach($events as $cat) {
+                    ?>                    
+                     <option value="<?php echo $cat['IDEvent'];?>"><?php echo $cat['NameEvent'];?></option>;
+                     <?php
+                     }
+                  ?>
+                 </select>
+            </div>
     <div class = "bkviewall">
         <div>
-            Event:        
-            <select name="IDEvent" id="IDEvent"  required>
-                <?php  
-
-                foreach($events as $cat) {
-                    ?>                    
-                        <option value="<?php echo $cat['IDEvent'];?>"><?php echo $cat['NameEvent'];?></option>;
-                    <?php
-                }
-                ?>
-            </select>
-            <br>
-            <fieldset style="width:250px">
-                NameCustomer: <input type="text" name="NameCustomer" id="NameCustomer" style="width:200px" required><br>
-            </fieldset>
+            <div >
+                NameCustomer: <input  type="text" name="NameCustomer" id="NameCustomer"  required><br>
+            </div>
         </div>
         <div>
             <div class = "bkview1">
-                <fieldset style="width:250px">
-                    Phone: <br><input type="text" name="Phone" id="Phone" style="width:200px"><br>
-                </fieldset>
-                <fieldset style="width:250px">
-                    Mail: <br><input type="text" name="Mail" id="Mail" style="width:200px"><br>
-                </fieldset>
+                <div >
+                    Phone: <br><input type="text" name="Phone" id="Phone" ><br>
+                </div>
+                <div >
+                    Mail: <br><input type="text" name="Mail" id="Mail" ><br>
+                </div>
+               
+                
+            
+        </div>
 
-    <fieldset >
+        </div>
+        <div >
         Address: <input type="text" name="Address" id="Address" ><br>
-    </fieldset>
-    <fieldset >
+        </div>
+        <div >
         Note: 
         <textarea rows="4" name="Note" id="Note">
         </textarea><br>
-    </fieldset>
+        </div>
+    
 
-    <div><button name="btsave" id="btnsave">Save</button></div>
+    <div><button name="btsave" id="btnsave">Book</button></div>
 
 <?php echo form_close(); ?><br/>
+
+</div>
