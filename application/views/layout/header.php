@@ -22,7 +22,9 @@
 							<h1 style = "font-size : 38px">NEXUS AQUARIUM</h1>
 						</div>
 						<div class = "hd2">
-							<span style = "text-align : center; font-size : 20px">Email : NexuxAqua@gmail.com</span>
+							<span style = "text-align : center; font-size : 20px">
+							<a href="mailto:manish@simplygraphix.com?subject=Feedback for Nexus Aquarium.com&body=Hello">Email : NexuxAqua@gmail.com</a>
+							</span>
 							<span style = "text-align : center; font-size : 20px>">Phone : 090 409 6335</span>
 						</div>
 					</div>
