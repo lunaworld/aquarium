@@ -19,14 +19,14 @@
     clear : both;
 }
 .total {
-    background-color : black;
+    background-color : DeepSkyBlue;
     display : grid;
-    grid-template-columns : 25% 25% 25% 25%;
+    grid-template-columns : 50% 50%;
 }
 .div1 {
     background-color : DarkTurquoise;
     display : grid;
-    grid-template-columns : 50% 50%;
+    grid-template-columns : 100%;
 }
 .column1 {
     border-style: solid;
@@ -38,14 +38,15 @@
     background-color : LightSkyBlue;
 }
 .div2 {
+    margin-left : 30px;
     background-color : DeepSkyBlue;
 }
 </style>
 <?php
 echo "<div class='all'>";
-    echo "<div >";
-        foreach ($gallery as $div1) {
         echo "<div class='total'>";
+        foreach ($gallery as $div1) {
+            echo "<div>";
             echo "<div class='div1'>";
                 echo "<div class='column1'>";
                     echo "<div>";
@@ -57,11 +58,17 @@ echo "<div class='all'>";
                         echo"'style ='width:100%'>";
                     echo "</div>";
                 echo "</div>";
+            
+
+
+
                 echo "<div class='column2'>";
                     echo "<div><h2>";
                         echo 'Animal Name : ';
                         echo $div1['NameAnimal'];
                     echo "</h2></div>";
+
+
                     echo "<div><h2>";
                         echo 'Age : ';
                         echo $div1['Age'];
@@ -72,19 +79,18 @@ echo "<div class='all'>";
                         echo $div1['Size'];
                     echo "</h2></div>";
                 echo "</div>";
-            echo "</div>";        
+            echo "</div>";
+    
+        
             echo "<div class='div2'>";
                 echo "<div><h2>";
                     echo 'Description : ';
-                    echo "</h2>";
-                    echo "<div>";
                     echo $div1['Description'];
-                    echo "</div>";
-                echo "</div>";
+                echo "</h2></div>";
             echo "</div>";    
-        echo"</div>";        
+            echo "</div>";
         }
-    echo "</div>";
+        echo "</div>";
     
 
 echo"</div>";
