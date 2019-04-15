@@ -32,7 +32,7 @@ class categoryClientCtrl extends CI_Controller {
 	}
 
 	public function index() {
-		$data['category'] = $this->animalmodel->truyvananimal();
+		$data['category'] = $this->categorymodel->truyvancategory();
 		$this->load->view('layout/header');
 		$this->load->view('category',$data);
 		$this->load->view('layout/footer');
