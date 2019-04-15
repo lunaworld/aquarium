@@ -23,7 +23,7 @@
             <a href = "eventCtrl">Event</a>
         </li>
         <li>
-            <a href = "#">Booking</a>
+            <a href = "bookingadmin">Booking</a>
         </li>
     </ul>
 </header>
