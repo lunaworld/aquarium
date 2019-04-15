@@ -8,7 +8,7 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
 </head>
 <body>
-<header>
+<header class = "hda1">
     <ul class = "hda">
         <li>
             <a href = "#">Home</a>

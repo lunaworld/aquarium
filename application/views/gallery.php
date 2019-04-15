@@ -62,7 +62,7 @@ echo "<div class='all'>";
 
                 echo "<div class='column2'>";
                     echo "<div><h2>";
-                        echo 'NameAnimal : ';
+                        echo 'Animal Name : ';
                         echo $div1['NameAnimal'];
                     echo "</h2></div>";
 
