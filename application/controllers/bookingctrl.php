@@ -14,7 +14,6 @@ class bookingctrl extends CI_Controller {
 
 	function index() {
 		$this->load->view('layout/header');
-		if($this->loginmodel->isLoggedIn()){};
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('IDEvent', 'IDEvent', 'required');
 		$this->form_validation->set_rules('NameCustomer', 'NameCustomer', 'required');
