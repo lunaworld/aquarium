@@ -53,7 +53,8 @@ class bookingctrl extends CI_Controller {
                     // 'StartTime' => $this->input->post('StartTime'),
                     // 'EndTime' => $this->input->post('EndTime'),
                     'Address' => $this->input->post('Address'),
-                    'Note' => $this->input->post('Note'),
+					'Note' => $this->input->post('Note'),
+					'status' => 0,
 				);
 				//Transfering data to Model
 				$this->bookingmodel->insert_data($data);

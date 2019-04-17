@@ -5,7 +5,7 @@
 <?php } ?>
 <div class = "align">
     
-        IDCategory: 
+        Category: 
         
         <select name="IDCategory" id="IDCategory"  required>
             <?php  
