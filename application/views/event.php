@@ -13,6 +13,7 @@ img {
     background-color : cyan;
 }
 .div1{
+    clear : both;
     background-color : deepskyblue;
 }
 .div2{
@@ -34,26 +35,28 @@ img {
     grid-template-columns : 50% 50%;
 }
 .row4{
-    margin-left : 30%;
+    margin-left : 10%;
 }
 .div3{
-    margin-left : 10%;
     background-color : deepskyblue;
 }
 </style>
 <?php
-echo "<div class='all'>";
-    echo "<div class='div1'>";
-        echo "<div>";
-        echo "<img src ='ImageEvent.jpg";
-        echo"'>";
-    echo "</div>";
+echo "<div style = 'clear:both' class='all'>";
+   
     
     echo "<div class='div2'>";
         echo "<div class='row1'>";
         
         foreach($event as $row1) {
- 
+            echo "<div>";
+            echo "<div class='div1'>";
+            echo "<img src ='";;
+            echo base_url();
+            echo "image/";
+            echo $row1['ImageEvent'];            
+            echo"'>";
+        echo "</div>";
             echo "<div><h2>"; 
                 echo $row1['NameEvent'];
             echo "</h2></div>";
@@ -94,15 +97,17 @@ echo "<div class='all'>";
                 echo $row1['EventPrice'];
             echo "</h2></div>";
         echo "</div>";
-        }
-    echo "</div>";
-
-    echo "<div class ='div3'>";
+        echo "</div>";
+        echo "<div class ='div3'>";
         echo "<div><h2>"; 
             echo 'Description : ';
             echo $row1['Description'];
         echo "</h2></div>";
+    
+        }
     echo "</div>";
+
+    
 
 
 echo "</div>";
