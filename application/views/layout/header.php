@@ -46,9 +46,14 @@
                     </li>
                     <li class="menu-item ">
                         <a href="event">Event</a>
+					</li>
+					<li class="menu-item ">
+                        <a href="feedback">Feedback</a>
                     </li>
 				</ul>
 			</nav>
 		</header><!--HEADER-->
+		<div style = 'clear:both; height:40px'>
+		</div>
 
 		

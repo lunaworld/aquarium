@@ -11,7 +11,7 @@
 <header class = "hda1">
     <ul class = "hda">
         <li>
-            <a href = "#">Home</a>
+            <a href = "admin">Home</a>
         </li>
         <li>
             <a href = "animalCtrl">Animal</a>
@@ -24,6 +24,9 @@
         </li>
         <li>
             <a href = "bookingadmin">Booking</a>
+        </li>
+        <li>
+            <a href = "#">Feedback</a>
         </li>
     </ul>
 </header>

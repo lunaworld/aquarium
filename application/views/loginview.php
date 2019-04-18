@@ -1,3 +1,4 @@
+<div style = 'width:400px;margin:auto;padding-top:150px;'>
 <?php echo form_open('loginctrl/login'); ?>
 
 <?php if (isset($message)) { ?>
@@ -12,3 +13,4 @@
     <input type = 'submit' value = 'login'>
 
 <?php echo form_close(); ?><br/>
+</div>

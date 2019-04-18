@@ -47,6 +47,7 @@ class animalctrl extends CI_Controller {
 
 	function index() {
 		if($this->loginmodel->isLoggedIn()){};
+		$data['animals'] = $this->animalmodel->truyvananimal();
 		$this->load->library('CKEditor');
         $this->load->library('CKFinder');
         //Add Ckfinder to Ckeditor

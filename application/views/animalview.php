@@ -1,3 +1,12 @@
+<style>
+    .animal-grid {
+        display:grid;
+        grid-template-columns: 10% 10% 10% 50% 20%;
+    }
+    p{
+        text-align: left;
+    }
+</style>
 <?php echo form_open_multipart('animalctrl'); ?>
 
 <?php if (isset($message)) { ?>
@@ -46,3 +55,49 @@
 </div>
     
 <?php echo form_close(); ?><br/>
+
+<h1 style = 'margin-top:80px; margin-bottom:30px;text-align:center'>
+All animal
+</h1>
+<div>
+    <div class = 'animal-grid'>
+        <div>
+        Name    
+        </div>
+        <div>
+        Age    
+        </div>
+        <div>
+        Size    
+        </div>
+        <div>
+        Description    
+        </div>
+        <div>
+        Operator    
+        </div>
+    </div>
+<?php
+    foreach($animals as $animal) {
+    ?>    
+        <div class ='animal-grid'>
+        <div>
+            <?php echo $animal['NameAnimal'];?>
+        </div>
+        <div>
+            <?php echo $animal['Age'];?>
+        </div>
+        <div>
+            <?php echo $animal['Size'];?>
+        </div>
+        <div>
+            <?php echo $animal['Description'];?>
+        </div>
+        <div>
+            <button style ='background:tomato;border-radius:2px;'>delete</button>
+        </div>
+    </div>
+    <?php
+    }
+?>            
+</div>

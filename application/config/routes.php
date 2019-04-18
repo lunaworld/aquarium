@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['login'] = 'loginctrl';
+$route['feedback'] = 'feedbackctrl';
 $route['bookingadmin'] = 'bookingadminCtrl';
 $route['eventCtrl'] = 'eventctrl';
 $route['categoryCtrl'] = 'categoryctrl';

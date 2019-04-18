@@ -1,19 +1,17 @@
-<?php echo form_open_multipart('feedbackctrl'); ?>
+<?php echo form_open('feedbackctrl'); ?>
 
 <?php if (isset($message)) { ?>
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
-
+<div style = 'width:50%; margin:auto;'>
     <fieldset >
-        Content: <input type="text" name="Content" id="Content"  required><br>
+        Content:<br> <input type="text" name="Content" id="Content"  required><br>
     </fieldset>
     <fieldset >
         Name: <br><input type="text" name="Name" id="Name" ><br>
     </fieldset>
 
-    <div><button name="btsave" id="btnsave">Save</button></div>
-
-    <span>Content:</span><span><?= ($Content ?? "") ?></span><br>
-    <span>Name:</span><span><?= ($Name ?? "") ?></span><br>
+    <div style = 'padding-left:10px;margin-top:10px'><button style = 'background:aqua;line-height:25px'name="btsave" id="btnsave">Send</button></div>
+</div>
     
 <?php echo form_close(); ?><br/>

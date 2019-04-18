@@ -17,6 +17,7 @@ class adminCtrl extends CI_Controller {
 		if($this->loginmodel->isLoggedIn()){
 			$data['var1'] = '';
 			$this->load->view('layout/adminheader.php', $data);
+			$this->load->view('adminhomeview.php', $data);
 			$this->load->view('layout/adminfooter.php', $data);
 		}
 	}

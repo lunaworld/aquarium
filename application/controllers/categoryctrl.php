@@ -49,13 +49,14 @@ class categoryctrl extends CI_Controller {
 		$this->load->library('CKEditor');
         $this->load->library('CKFinder');
 
-        //Add Ckfinder to Ckeditor
+		//Add Ckfinder to Ckeditor
+		$data['animals'] = $this->categorymodel->truyvancategory();
         $this->ckfinder->SetupCKEditor($this->ckeditor,'../../assets/ckfinder/'); 
 		$this->load->view('layout/adminheader.php');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('CategoryName', 'CategoryName', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('categoryview');
+			$this->load->view('categoryview',$data);
 		} else {
 			$image_path = realpath(APPPATH . '../image/');
 			$config['upload_path']          = $image_path;

@@ -2,6 +2,8 @@
 	
 
 </div>
+<div style ='height:30px'>
+</div>
 <footer>
 <div class = "aquatheme">
 	<div class="icerik"></div>

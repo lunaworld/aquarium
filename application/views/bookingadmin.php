@@ -1,7 +1,7 @@
 <style>
     .booking-grid {
         display:grid;
-        grid-template-columns: 12% 12% 12% 12% 12% 40%;
+        grid-template-columns: 12% 12% 12% 12% 12% 20% 20%;
     }
 </style>
 <div class ='bookingadmin'>
@@ -25,6 +25,9 @@
             </div>
             <div>
                 Note
+            </div>
+            <div>
+                operator
             </div>
         </div>
         <?php
@@ -54,7 +57,11 @@
                 echo "<div>";
                 echo $booking['Note'];
                 echo "</div>";
-                
+                echo "<div>";
+                echo "<button style = 'background:red;border-radius:5px'>delete</button> ";
+                echo "<button style = 'background:#85ed24;border-radius:5px'>confirm</button> ";
+                echo "<button style = 'background:#9898e7;border-radius:5px'>reject</button>";
+                echo "</div>";
             echo "</div>";
         }
     ?>

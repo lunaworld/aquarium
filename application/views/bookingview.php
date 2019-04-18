@@ -6,15 +6,19 @@ input,textarea {
     clear:both;
 }
 </style>
-<div class ='asd'>
-<?php echo form_open_multipart('bookingctrl'); ?>
+<div style = 'width:50%; margin:auto;'>
+<div>
+    <h1> Booking Form</h1>
+</div>
+<div >
+<?php echo form_open('bookingctrl'); ?>
 
 <?php if (isset($message)) { ?>
 
 <h3 style="color:green;">Save successfully</h3><br>
 <?php } ?>
-            <div class ='dddd'>
-                Event:      
+            <div >
+                Event Name:<br />      
                  <select name="IDEvent" id="IDEvent"  required>
                   <?php  
 
@@ -26,14 +30,14 @@ input,textarea {
                   ?>
                  </select>
             </div>
-    <div class = "bkviewall">
+    <div>
         <div>
             <div >
                 NameCustomer: <input  type="text" name="NameCustomer" id="NameCustomer"  required><br>
             </div>
         </div>
         <div>
-            <div class = "bkview1">
+            <div>
                 <div >
                     Phone: <br><input type="text" name="Phone" id="Phone" ><br>
                 </div>
@@ -56,8 +60,9 @@ input,textarea {
         </div>
     
 
-    <div><button name="btsave" id="btnsave">Book</button></div>
+    <div style = 'padding-left:1px;margin-top:10px'><button style = 'background: #6afe61; height: 30px;'name="btsave" id="btnsave">Book</button></div>
 
 <?php echo form_close(); ?><br/>
 
+</div>
 </div>

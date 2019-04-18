@@ -6,9 +6,12 @@ class feedbackctrl extends CI_Controller {
 		parent::__construct();
 		$this->load->model('feedbackmodel');
 		$this->load->helper('url_helper');
+		$this->load->helper('html');
+		$this->load->helper('url');
 	}
 
 	function index() {
+		$this->load->view('layout/header');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('Name', 'Name', 'required');
 		if ($this->form_validation->run() == FALSE) {
@@ -24,6 +27,7 @@ class feedbackctrl extends CI_Controller {
 			//Loading View
 			$this->load->view('feedbackview', $data);
 		}
+		$this->load->view('layout/footer');
 	}
 }
 ?>
