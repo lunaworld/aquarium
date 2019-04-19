@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class CLientEventCtrl extends CI_Controller {
+class ClientEventCtrl extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 *

@@ -20,15 +20,14 @@ class loginctrl extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('username', 'username', 'required');
         $this->form_validation->set_rules('password', 'password', 'required');
-        print_r($this->session->userdata());
         $this->load->view('loginview');
     }
 
-    // function logout() {
-    //     $this->session->sess_destroy();
-    //     redirect('/' ,'refresh');
-    //     exit;
-    // }
+    function logout() {
+        $this->session->sess_destroy();
+        redirect('/' ,'login');
+        exit;
+    }
 
     function login() {
         $username = $this->input->post('username');
